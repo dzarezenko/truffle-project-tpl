@@ -1,0 +1,29 @@
+{
+  "name": "truffle-project-tpl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "truffle compile --all",
+    "build": "rm -rf ./build/dist/ && sol-merger -c \"./contracts/**/*.sol\" ./build/dist/",
+    "migrate": "npm run compile && truffle migrate --network bsc_testnet --compile-none --reset",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzarezenko/truffle-project-tpl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzarezenko/truffle-project-tpl/issues"
+  },
+  "homepage": "https://github.com/dzarezenko/truffle-project-tpl#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3"
+  },
+  "devDependencies": {
+    "sol-merger": "^4.1.1"
+  }
+}
